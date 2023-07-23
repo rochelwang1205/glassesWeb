@@ -134,8 +134,9 @@ nav .nav-list{
     }
 }
 @media(max-width:375px) {
-    .nav-bar{
-        display: block;
+    nav .nav-bar{
+        flex-direction: column;
+        align-items: start;
         padding: 0;
     }
     .logo img{
@@ -153,16 +154,15 @@ nav .nav-list{
 }
 /* header */
 header{
-    
     background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true" );
-     background-position: center;
+    background-position: center;
     background-size: cover;
 }
 .header-text{
     color: var(--dred);
     text-align: right;
-    height:787px;
     margin: 0 auto;
+    padding: 296px 12px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -179,9 +179,21 @@ header{
     color: var(--white);
 }
 @media(max-width:768px) {
-    
+    header{
+        background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true");
+        background-size: 100% 100%;
+    }
 }
 @media(max-width:375px) {
+    header .header-text{
+        padding: 144px 0;
+    }
+    header .header-text h1{
+        font-size: 16px;
+    }
+    header .header-text h2{
+        font-size: 24px;
+    }
     
 }
 /* main */
@@ -189,13 +201,14 @@ header{
 .feature{
     background-color: var(--pale);
     text-align: center;
-    padding: 80px 0px;
+    padding: 80px 12px;
 }
 .features{
     margin: 0 auto;
     text-align: center;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     max-width: 1296px;
 }
@@ -213,39 +226,67 @@ header{
     text-align: left;
 }
 @media(max-width:768px) {
-    
+    .features{
+        justify-content: center;
+    }
 }
 @media(max-width:375px) {
-    
+    .feature{
+        padding: 40px 12px;
+    }
+    .feature h3{
+        font-size: 24px;
+    }
+    .feature .features{
+        justify-content: center;
+        gap: 24px;
+    }
 }
 /* .classic-goods */
 .classic-goods{
     margin: 0 auto;
     text-align: center;
-    padding: 80px 0px;
-    max-width: 1296px;
+    padding: 80px 12px;
 }
 .classic-goods h3{
     color: var(--dred);
 }
 .design-card{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: var(--red);
     font-style: italic;
+    max-width: 1296px;
+    margin: 0 auto;
     gap: 24px;
 }
-.design-card img{
-    width: 416px;
+.design-card li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media(max-width:984px){
+    .design-card{
+        display: block;
+        width:50%;
+    }
 }
 
 @media(max-width:768px) {
-    .design-card{
-        display: block;
-    }
+
 }
 @media(max-width:375px) {
+    .classic-goods{
+        padding: 40px 12px;
+    }
+    .classic-goods h3{
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    .classic-goods .design-card{
+        gap: 24px;
+    }
     
 }
 /* .design-goods */
@@ -264,7 +305,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 0px;
+    padding: 80px 12px;
     max-width: 1296px;
 }
 .design-img{
@@ -336,7 +377,7 @@ header{
 /* .contact-us */
 .contact-us{
     background-color: var(--pale);
-    padding: 80px 0px;
+    padding: 80px 12px;
 }
 .form{
     max-width: 636px;
@@ -374,6 +415,27 @@ input{
     display: block;
     text-align: center;
     margin: 0 auto;
+
+}
+@media(max-width:768px) {
+    .contact-us{
+        padding: 80px 96px;
+    }
+    .contact-us p{
+        font-size: 16px;
+    }
+
+}
+@media(max-width:624px) {
+    .contact-us{
+        padding: 80px 24px;
+    }
+
+}
+@media(max-width:375px) {
+    .contact-us{
+        padding: 80px 12px;
+    }
 
 }
 /* footer */
@@ -447,6 +509,34 @@ hr{
     footer{
         padding: 48px 24px 40px 24px;  
     }
+    footer .contact-wrap{
+        max-width:100%;
+    }
+    footer .contact-wrap .nav-contact{
+        max-width:100%;
+    }
+    footer .nav-contact p span{
+        font-size: 30px;
+    }
+    .social-media li{
+        max-width: 40px;
+    }
+    .policy {
+        display: flex;
+        gap: 24px;
+    }
+}
+@media(max-width:604px) {
+    footer .contact-wrap .nav-contact{
+        width:100%;
+    }
+    footer .nav-contact p{
+        font-size: 16px;
+    }
+    .policy {
+        display: flex;
+        gap: 8px;
+    }
 }
 @media(max-width:375px) {
     footer .nav-contact p{
@@ -458,6 +548,9 @@ hr{
     }
     footer .nav-contact .nav-list{
         display: none;
+    }
+    .social-media li{
+        max-width: 24px;
     }
     .policy, .copyright{
         flex-direction: column;
