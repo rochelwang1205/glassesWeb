@@ -233,15 +233,12 @@ header{
     color: var(--dred);
     text-align: center;
 }
-label{
-    display: inline-block;
-}
 input{
     background-color: transparent;
     border-color: var(--black);
     height: 36px;
     width:100%;
-    text-indent: 12px;
+    text-indent: 8px;
 }
 .suggest{
     padding-bottom: 106px;
@@ -250,6 +247,8 @@ input{
 .agreement{
     height:fit-content;
     width:fit-content;
+}
+.agreementTxt{
     margin-bottom: 48px;
 }
 .sent-btn{

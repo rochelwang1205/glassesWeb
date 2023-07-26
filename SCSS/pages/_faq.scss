@@ -1,0 +1,34 @@
+.faq{
+    max-width:1368px;
+    padding: 80px 36px 96px 36px;
+    margin: 0 auto;
+}
+.faq .wrap{
+    margin-right: 33.33%;
+}
+.faq .wrap .title{
+    display: flex;
+}
+.faq .wrap .red-bar{
+    border: 4px solid var(--red);
+}
+@media(max-width:768px) {
+    .faq{
+        padding-top: 80px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .faq .wrap{
+        margin-right: 0;
+    }
+}
+@media(max-width:375px) {
+    .faq{
+        padding-top: 40px;
+        padding-bottom: 64px;
+    }
+    .faq h1{
+        font-size: 24px;
+    }
+
+}
