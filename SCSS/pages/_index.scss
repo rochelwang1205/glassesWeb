@@ -3,12 +3,21 @@ header{
     background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true" );
     background-position: center;
     background-size: cover;
+    height:787px;
+    display: flex;
+    justify-content: end;
+    @include pad{
+        background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true");
+    }
+    @include mobile{
+        height:396px;
+    }
 }
 .header-text{
     color: var(--dred);
     text-align: right;
-    margin: 0 auto;
-    padding: 296px 12px;
+    padding-left:12px;
+    padding-right: 12px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,27 +29,20 @@ header{
     width:fit-content;
     margin-left:auto;
 }
+.buy-btn:hover{
+    background-color: var(--dred);
+}
 .header-text a{
     text-decoration: none;
     color: var(--white);
 }
-@media(max-width:768px) {
-    header{
-        background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true");
-        background-size: 100% 100%;
-    }
-}
 @media(max-width:375px) {
-    header .header-text{
-        padding: 144px 0;
-    }
     header .header-text h1{
         font-size: 16px;
     }
     header .header-text h2{
         font-size: 24px;
     }
-    
 }
 /* main */
 /* .feature */
@@ -48,6 +50,9 @@ header{
     background-color: var(--pale);
     text-align: center;
     padding: 80px 12px;
+    @include mobile{
+        padding: 40px 12px;
+    }
 }
 .features{
     margin: 0 auto;
@@ -57,45 +62,48 @@ header{
     align-items: center;
     flex-wrap: wrap;
     max-width: 1296px;
+    @include pad{
+        justify-content: center;
+    }
+    @include mobile{
+        justify-content: center;
+        gap: 24px;
+    }
 }
-.feature-card li{
+.feature-card{
     text-align: center;
     width: 306px;
 }
 .feature-card img{
     width: 100px; 
 }
-.feature h3, .feature-card h4{
+.feature h3{
+    color: var(--dred);
+    @include mobile{
+        font-size: 24px;
+    }
+}
+.feature-card h4{
     color: var(--dred);
 }
 .feature-card p{
     text-align: left;
-}
-@media(max-width:768px) {
-    .features{
-        justify-content: center;
-    }
-}
-@media(max-width:375px) {
-    .feature{
-        padding: 40px 12px;
-    }
-    .feature h3{
-        font-size: 24px;
-    }
-    .feature .features{
-        justify-content: center;
-        gap: 24px;
-    }
 }
 /* .classic-goods */
 .classic-goods{
     margin: 0 auto;
     text-align: center;
     padding: 80px 12px;
+    @include mobile{
+        padding: 40px 12px;
+    }
 }
 .classic-goods h3{
     color: var(--dred);
+    @include mobile{
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
 }
 .design-card{
     display: flex;
@@ -106,35 +114,20 @@ header{
     max-width: 1296px;
     margin: 0 auto;
     gap: 24px;
+    @include laptopS{
+        display: block;
+        width:50%;
+    }
+    @include mobile{
+        gap: 24px;
+    }
 }
 .design-card li{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-@media(max-width:984px){
-    .design-card{
-        display: block;
-        width:50%;
-    }
-}
 
-@media(max-width:768px) {
-
-}
-@media(max-width:375px) {
-    .classic-goods{
-        padding: 40px 12px;
-    }
-    .classic-goods h3{
-        font-size: 24px;
-        margin-bottom: 24px;
-    }
-    .classic-goods .design-card{
-        gap: 24px;
-    }
-    
-}
 /* .design-goods */
 .design-goods{
     margin: 0 auto;
@@ -155,7 +148,10 @@ header{
     max-width: 1296px;
 }
 .design-img{
-    max-width: 648px;
+    width: 50%;
+    @include pad{
+        width: 100%;
+    }
 }
 .design-name{
     color: var(--red); 
@@ -163,18 +159,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.design-name h4{
-    background-color: var(--white); 
-}
-@media(max-width:768px) {
-    .design-name{
+    @include pad{
         display: block;
         margin: 0 auto;
     }
 }
-@media(max-width:375px) {
-    
+.design-name h4{
+    background-color: var(--white); 
 }
 /* .recommendation */
 .recommendation{
@@ -192,38 +183,42 @@ header{
     gap: 24px;
     max-width: 1296px;
     flex-wrap: wrap;
+    @include pad{
+        justify-content: center;
+    }
 }
 .recommend-card{
     border-radius: 4px;
     box-shadow: 0px 2px 6px #00000029;
     border: 1px solid #DEE2E6;
     width:22%;
+    @include pad{
+        width: 48%;
+    }
+    @include padS{
+        width: 100%;
+    }
+    @include mobile{
+        width: 100%;
+    }
 }
 .feedback{
     margin: 16px;
 }
-@media(max-width:768px) {
-    .customer-recommendation{
-        justify-content: center;
-    }
-    .recommend-card{
-        width: 48%;
-    }
-}
-@media(max-width:624px) {
-    .recommend-card{
-        width: 100%;
-    }
-}
-@media(max-width:375px) {
-    .recommend-card{
-        width: 100%;
-    }
-}
+
 /* .contact-us */
 .contact-us{
     background-color: var(--pale);
     padding: 80px 12px;
+    @include pad{
+        padding: 80px 96px;
+    }
+    @include padS{
+        padding: 80px 24px;
+    }
+    @include mobile{
+        padding: 80px 12px;
+    }
 }
 .form{
     max-width: 636px;
@@ -232,6 +227,9 @@ header{
 .contact-us h3{
     color: var(--dred);
     text-align: center;
+}
+label{
+    display: block;
 }
 input{
     background-color: transparent;
@@ -247,39 +245,30 @@ input{
 .agreement{
     height:fit-content;
     width:fit-content;
+    background-color: transparent;
 }
 .agreementTxt{
     margin-bottom: 48px;
+    display: flex;
+    align-items: center;
 }
 .sent-btn{
     text-decoration: none;
-    max-width:416px;
-    padding: 16px 0px;
+    width:416px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     background-color: var(--red);
     color: var(--white);
     display: block;
     text-align: center;
     margin: 0 auto;
-
+    border: none;
+    @include padS{
+        max-width: 100%;
+    }
 }
 @media(max-width:768px) {
-    .contact-us{
-        padding: 80px 96px;
-    }
     .contact-us p{
         font-size: 16px;
     }
-
-}
-@media(max-width:624px) {
-    .contact-us{
-        padding: 80px 24px;
-    }
-
-}
-@media(max-width:375px) {
-    .contact-us{
-        padding: 80px 12px;
-    }
-
 }

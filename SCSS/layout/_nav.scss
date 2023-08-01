@@ -21,16 +21,20 @@ nav .nav-list{
 nav .nav-list li a{
     text-decoration: none;
     color:var(--white);
+    padding:8px;
+}
+nav .nav-list li a:hover{
+    color: var(--dred);
 }
 @media(max-width:768px) {
     .nav-bar{
         padding: 25px 12px;
     }
     .nav-bar .nav-list{
-        max-width: 100%;
+        width: 100%;
     }
 }
-@media(max-width:375px) {
+@media(max-width:576px) {
     nav .nav-bar{
         flex-direction: column;
         align-items: start;
