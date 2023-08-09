@@ -6,20 +6,20 @@
 .wrapBranch .title{
     display: flex;
 }
-.wrapBranch .title .red-bar{
-    border: 4px solid var(--red);
+.wrapBranch .title h1{
+    border-left: 4px solid var(--red);
+    padding-left: 16px;
 }
 .wrapBranch .area{
     display: flex;
 }
 .wrapBranch .area select{
     height:38px;
-    max-width:304px;
+    width:304px;
 }
 
 .wrapBranch .cards{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
@@ -60,14 +60,11 @@
         padding: 160px 36px 96px 36px;
     }
     .wrapBranch .cards .card{
-        width:48%;
+        width:100%;
     }
 }
 @media(max-width:375px) {
     .wrapBranch{
         padding: 40px 12px 80px 12px;
-    }
-    .wrapBranch .cards .card{
-        width:100%;
     }
 }
