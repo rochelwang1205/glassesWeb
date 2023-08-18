@@ -9,15 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/SCSS/all.css">
 </head>
 <body>
     <%- include('./layout/header'); -%>
     <main class="wrapBranch">
-        <div class="title mb-32">
+        <div class="title mb-32" data-aos="fade-up" data-aos-duration="1000">
             <h1 class="fz-ml fwb">門市據點</h1>
         </div>
-        <div class="area">
+        <div class="area" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="fz-s fwb mb-32">選擇地區</h2>
             <select name="city" id="city" class="ml-16">
                 <option value="台北市">台北市</option>
@@ -45,7 +46,7 @@
             </select>            
         </div>
         <ul class="cards">
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="../assets/image/store/store-1.png" alt="">
                 <h3>台北中山旗艦店</h3>
                 <div class="info">
@@ -63,7 +64,7 @@
                 </div>
                 <a href="#" class="fz-ss">詳細資訊</a>
             </li>
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="../assets/image/store/store-2.png" alt="台北綠園店店面">
                 <h3>台北綠園店</h3>
                 <div class="info">
@@ -81,7 +82,7 @@
                 </div>
                 <a href="#" class="fz-ss">詳細資訊</a>
             </li>
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="../assets/image/store/store-3.png" alt="台中清水旗艦店店面">
                 <h3>台中清水旗艦店</h3>
                 <div class="info">
@@ -99,7 +100,7 @@
                 </div>
                 <a href="#" class="fz-ss">詳細資訊</a>
             </li>
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="../assets/image/store/store-4.png" alt="高雄中正形象店店面">
                 <h3>高雄中正形象店</h3>
                 <div class="info">
@@ -116,7 +117,7 @@
                 </div>
                 <a href="#" class="fz-ss">詳細資訊</a>
             </li>
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="../assets/image/store/store-5.png" alt="高雄夢時代店面">
                 <h3>高雄夢時代店</h3>
                 <div class="info">
@@ -136,6 +137,10 @@
         </ul>
     </main>
     <%- include('./layout/footer'); -%>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="../main.js"></script>
 </body>
 </html>
