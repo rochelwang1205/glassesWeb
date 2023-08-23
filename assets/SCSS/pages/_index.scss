@@ -1,13 +1,13 @@
 /* header */
 header{
-    background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true" );
+    background: url("/assets/image/home/home-header.png" );
     background-position: center;
     background-size: cover;
     height:787px;
     display: flex;
     justify-content: end;
     @include pad{
-        background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true");
+        background: url("/assets/image/home/home-header-sm.png");
     }
     @include mobile{
         height:396px;
@@ -131,7 +131,7 @@ header{
 .design-goods{
     margin: 0 auto;
     text-align: center; 
-    background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true");
+    background: url("/assets/image/home/index-bg-sm.png");
     background-position: center;
     background-size: cover;
 }
