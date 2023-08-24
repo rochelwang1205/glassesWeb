@@ -1,0 +1,132 @@
+// *{
+//     outline:1px solid red;
+// }
+//sub-class
+.sub-class{
+    background-color: var(--dred);
+    .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 12px;
+    @include padS{
+        display: none;
+    }
+    .option{
+        display: flex;
+        gap: 48px;
+    }
+    a{
+        text-decoration: none;
+        color: var(--white);
+        &:hover{
+            color: var(--red);
+        }
+    }
+    span{
+        vertical-align: middle;
+    }
+}
+}
+//main
+.wrapBlog{
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 96px 12px 80px 12px;
+}
+.wrapBlog .title{
+    display: flex;
+}
+.wrapBlog .title h1{
+    border-left: 4px solid var(--red);
+    padding-left: 16px;
+}
+// articles
+.articles{
+    .article{
+        display: flex;
+        gap: 24px;
+        margin-bottom: 60px;
+        @include laptopS{
+            flex-direction: column;
+            align-items: center;
+            
+        }
+            img{
+                max-width: 636px;
+                height: auto;
+            @include pad{
+                width: 100%;
+            }
+        }
+        h2{
+            color: var(--dred);
+            @include laptopS{
+                font-size: 24px;
+            }
+        }
+        .summary{
+            max-width: 636px;
+        }
+        .summary div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include laptopS{
+                font-size: 16px;
+            }
+        }
+        p{
+            @include laptopS{
+                font-size: 16px;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+        .more{
+            color: var(--dred);
+            text-decoration: none;
+            display: block;
+            text-align: right;
+            @include laptopS{
+                font-size: 16px;
+                color: var(--black);
+                font-weight: normal;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+}
+// pagination
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
+    @include padS{
+        margin: 64px 0;
+    }
+    a{
+        text-decoration: none;
+        border:1px solid var(--black);
+        color: var(--black);
+        padding: 12px 18px;
+        &:hover{
+            background-color: var(--black);
+            color: var(--white);
+        }
+        @include padS{
+            padding: 8px 14px;
+            font-size: 12px;
+        }
+    }
+    .active{
+        color: var(--white);
+        background-color: var(--black);
+    }
+}
