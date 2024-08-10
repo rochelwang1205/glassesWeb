@@ -1,0 +1,71 @@
+.sunglasses-series{
+    .banner{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        img{
+            width: 50%;
+        }
+    }
+    .product-section{
+        margin-top: 80px;
+        text-align: center;
+        h2{
+            font-size: 42px;
+            font-weight: 700;
+        }
+        h3{
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+    }
+}
+.container{
+    margin: 0 auto;
+    max-width: 1296px;
+    display: flex;
+    align-items: center;
+}
+.sunglasses-product-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    .product-card{
+        width: 32%;
+        @include laptopS{
+            width: 48%;
+        }
+        @include padS{
+            width: 100%;
+        }
+        .info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            span{
+                color: #AA0601;
+                font-weight: 700;
+            }
+        }
+        .pattern{
+            display: flex;
+            gap: 8px;
+            .color-brown{
+                background-color: #5F3E2D;
+                width: 24px;
+                height: 24px;
+                border-radius: 4px;
+            }
+            .color-orange{
+                background-color: #B75929;
+                width: 24px;
+                height: 24px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
