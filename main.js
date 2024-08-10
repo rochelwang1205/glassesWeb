@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     optical_data.forEach(function(item) {
         optical_str += `<li class="product-card">
-                    <img src="../assets/image/series-products/${item.imgUrl}" alt="${item.name}">
+                    <img src="/assets/image/series-products/${item.imgUrl}" alt="${item.name}">
                     <div class="info"><h4>${item.name}</h4><span>${item.salePrice}</span></div>
                     <div class="pattern">
                       <div class="color-brown"></div>
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sunglasses_data.forEach(function(item) {
         sunglasses_str += `<li class="product-card">
-                    <img src="../assets/image/series-products/${item.imgUrl}" alt="${item.name}">
+                    <img src="/assets/image/series-products/${item.imgUrl}" alt="${item.name}">
                     <div class="info"><h4>${item.name}</h4><span>${item.salePrice}</span></div>
                     <div class="pattern">
                       <div class="color-brown"></div>
