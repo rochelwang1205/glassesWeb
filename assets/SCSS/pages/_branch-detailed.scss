@@ -1,0 +1,13 @@
+.card-details{
+    display: flex;
+    gap: 24px;
+    @include laptopS {
+        flex-direction: column;
+        .card-detailed{
+            display: flex;
+            img{
+                width: 50%;
+            }
+        }
+    }
+}

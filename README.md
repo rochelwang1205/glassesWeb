@@ -16,7 +16,7 @@
 ## Overview
 - 2024六角學院切版直播班第三、四週任務
 - 2023六角學院切版直播班第三、四週任務
-- SASS/SCSS
+- Vite, SASS/SCSS
 
 
 ### Links
@@ -29,10 +29,13 @@
 ### Built with
 
 - git, Node.js
+- Vite
 - SASS/SCSS
 - ejs
   
 ### The following goals
+- 🎈2024/08/28 Done all pages with RWD!
+- 2024/08/28 use Vite global import imgs, branch-chungshan,html, blogpage(2hrs)
 - 2024/08/10 optical.html, sunglasses.html (3hrs)
 - 2023/08/24 blog.html (2hrs)
 - 2023/08/03 faq.html, branch.html
@@ -40,7 +43,7 @@
 
 ### Useful resources
 好用的資源：
-- 1. 
+- 1. [Vite - global import](https://vitejs.dev/guide/features.html#glob-import)
 
 ## Author
 

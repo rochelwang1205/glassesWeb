@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>門市據點</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../assets/SCSS/all.css">
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <main class="wrapBranch">
+        <div class="title mb-32" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="fz-ml fwb">門市據點</h1>
+        </div>
+        <div class="area" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="fz-s fwb mb-32">選擇分店</h2>
+            <select name="city" id="city" class="ml-16">
+                <option value="台北中山旗艦店">台北中山旗艦店</option>
+                <option value="台北綠園店">台北綠園店</option>
+            </select>            
+        </div>
+        <div class="card-details">
+            <div class="card card-detailed" data-aos="fade-up" data-aos-duration="1000">
+                <img src="../assets/image/store/store-1.png" alt="">
+                <div>
+                    <h3>台北中山旗艦店</h3>
+                    <div class="info">
+                        
+                        <p class="mb-8"><span class="material-symbols-outlined">
+                            call
+                            </span>電話：(02)000-1234</p>
+                        <p class="mb-8"><span class="material-symbols-outlined">
+                            schedule
+                            </span>營業時間：10:00-21:00</p>
+                        <p><span class="material-symbols-outlined">
+                            location_on
+                            </span>地址：台北市中山區南京東路25巷2-1號</p>
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/image/store/map2@.png" alt="chungshan-branch-map">
+        </div>
+    </main>
+    <%- include('./layout/footer'); -%>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
